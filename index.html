@@ -1,47 +1,484 @@
-  <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <link rel="stylesheet" href="main.css">
-    <meta charset="UTF-8">
-    <title>Body Horror</title>
-        <h1> Welcome to the Body Horror Show</h1>
-         <div class = "text"> 
-            <p> The Body Horror Show est un projet pluridisciplinaire (danse, théâtre, créatures et performances) de courtes histoires de métamorphoses horrifiques.</p>
+Put your HTML text here
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BODY HORROR SHOW • ép.1</title>
+  <style>
+    /* ---------- TACKY VHS • FAIT MAIN • SÉRIE B ---------- */
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=VT323&family=Rubik+Glitch&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #070004;
+      background-image: repeating-linear-gradient(45deg, #1a0010 0px, #1a0010 2px, #100008 2px, #100008 8px);
+      font-family: 'Special Elite', 'Courier New', monospace;
+      color: #fdeff2;
+      line-height: 1.4;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(10, 0, 6, 0.82);
+      border: 6px double #ff44aa;
+      box-shadow: 0 0 0 3px #00ffcc33, 0 0 20px #ff00aa, 0 0 40px #ff0066;
+      padding: 2rem 2rem 3rem;
+      backdrop-filter: blur(1px);
+      position: relative;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: repeating-linear-gradient(0deg, rgba(255, 0, 200, 0.05) 0px, rgba(0, 255, 255, 0.05) 2px, transparent 3px, transparent 8px);
+      pointer-events: none;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Rubik Glitch', 'Impact', fantasy;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-shadow: 3px 3px 0 #ff00aa, -2px -2px 0 #00ffff, 0 0 15px hotpink;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #fff0f0;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+      border-bottom: 3px dotted #fe19a7;
+      display: inline-block;
+    }
+
+    .sous-titre {
+      font-family: 'VT323', monospace;
+      font-size: 1.9rem;
+      color: #b3ffe0;
+      text-shadow: 0 0 8px #0ff, 0 0 18px #ff66aa;
+      margin-top: -0.2rem;
+      border-top: 2px dashed #45ff9e;
+      border-bottom: 2px dashed #ff44aa;
+      padding: 8px 0;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      justify-content: space-around;
+      margin: 2.5rem 0 2rem;
+      background: #220011;
+      padding: 1.2rem 0.5rem;
+      border: 6px ridge #ff77aa;
+      box-shadow: inset 0 0 10px #000, 0 0 0 2px #0ff;
+    }
+
+    .menu a {
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      color: #fcd8ff;
+      text-decoration: wavy underline #ff33cc 2px;
+      padding: 0 6px;
+      transition: 0.2s;
+      background: #33001a;
+    }
+
+    .menu a:hover {
+      background: black;
+      color: #ffff99;
+      text-decoration: none;
+      transform: scale(0.95) rotate(-1deg);
+      box-shadow: 4px 4px 0 #ff2288;
+    }
+
+    section {
+      margin: 4rem 0 5rem;
+      padding: 2rem 1.8rem;
+      border: 6px double #ee44aa;
+      background: #0d000a;
+      background-image: radial-gradient(circle at 10% 30%, #330022 2px, transparent 3px);
+      box-shadow: 15px 15px 0 #550033, 0 0 0 2px cyan;
+      position: relative;
+    }
+
+    section::before {
+      content: "✦✦✦";
+      position: absolute;
+      top: -18px;
+      left: 20px;
+      background: #070004;
+      color: #ff88dd;
+      padding: 0 12px;
+      font-size: 1.6rem;
+      letter-spacing: 8px;
+    }
+
+    .bio-groupe {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .membres {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.2rem;
+    }
+
+    .carte {
+      background: #1c0015;
+      border: 4px dotted #ff44bb;
+      padding: 1.5rem 1rem;
+      max-width: 250px;
+      box-shadow: 8px 8px 0 #006b6b;
+      font-size: 0.95rem;
+      transform: rotate(0.5deg);
+    }
+
+    .carte strong {
+      color: #ffb3ec;
+      font-size: 1.4rem;
+      font-family: 'Rubik Glitch';
+      display: block;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0 #b30070;
+    }
+
+    .teaser {
+      background: black;
+      padding: 1.2rem;
+      border: 6px inset #aa44ff;
+      margin: 30px 0;
+      font-family: 'VT323';
+      font-size: 1.5rem;
+    }
+
+    .teaser a {
+      color: #aaffdd;
+      background: #3f0030;
+      padding: 6px 15px;
+      border: 3px dashed cyan;
+    }
+
+    .photofake {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .polaroid {
+      background: #ecd96a;
+      padding: 10px 10px 25px 10px;
+      border: 2px solid #444;
+      transform: rotate(-2deg);
+      box-shadow: 10px 10px 0 #3f3f3f;
+      color: black;
+      font-family: 'Courier New';
+      font-weight: bold;
+      font-size: 0.8rem;
+      max-width: 180px;
+    }
+
+    .polaroid:nth-child(even) {
+      transform: rotate(4deg);
+      background: #e3c795;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 140px;
+      background: repeating-linear-gradient(45deg, #703030, #2d1a1a 10px);
+      border: 2px solid black;
+      display: block;
+      margin-bottom: 8px;
+      object-fit: cover;
+    }
+
+    .budget-table {
+      background: #1e0016;
+      border: 8px solid #ed2b8a;
+      padding: 0.8rem;
+      margin: 2rem 0;
+      color: #fcf1c7;
+      font-size: 0.9rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .budget-row {
+      display: grid;
+      grid-template-columns: 2fr 0.8fr 1fr 1fr;
+      border-bottom: 1px dashed #ffaad4;
+      padding: 10px 4px;
+    }
+
+    .budget-header {
+      background: #cc1177;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'VT323';
+      font-size: 1.3rem;
+    }
+
+    .total-highlight {
+      background: #3b0040;
+      color: #ffcc99;
+      padding: 1rem;
+      border: 6px double cyan;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    /* ---------- TON GÉNÉRATEUR ---------- */
+    .generateur-block {
+      background: #220022;
+      border: 12px ridge #f66ec7;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .generator {
+      background: #ff44aa;
+      border: 6px double black;
+      padding: 18px 24px;
+      font-size: 1.6rem;
+      font-family: 'Rubik Glitch', fantasy;
+      color: #001111;
+      text-shadow: 2px 2px 0 cyan;
+      cursor: pointer;
+      transition: 0.1s;
+      box-shadow: 12px 12px 0 #006060;
+      margin-bottom: 2rem;
+    }
+
+    .generator:hover {
+      background: #aaff00;
+      color: black;
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 4px 4px 0 magenta;
+    }
+
+    #pitches {
+      background: #fffcc9;
+      color: #1a0010;
+      font-size: 1.4rem;
+      padding: 1.8rem 1.5rem;
+      border-radius: 40px 0 40px 0;
+      border: 6px dotted #ff0066;
+      margin: 1.5rem 0;
+      font-family: 'VT323';
+      box-shadow: inset 0 0 30px #ff99bb;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    .square p {
+      margin: 0.8rem 0;
+    }
+
+    .square strong {
+      color: #b30059;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      margin-top: 5rem;
+      border-top: 10px dotted #fe4c9c;
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #b8ffd4;
+      word-break: break-word;
+    }
+
+    .qr-fake {
+      font-size: 2rem;
+      background: black;
+      color: white;
+      border: 6px solid white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin: 1rem;
+      font-family: 'VT323';
+    }
+
+    a {
+      color: #b5ffff;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      background: #001e1e;
+      padding: 5px;
+    }
+
+    hr {
+      border: none;
+      border-top: 6px dashed #ff80bf;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ========== H E A D E R ========== -->
+    <h1>THE<br>BODY<br>HORROR<br>SHOW</h1>
+    <div class="sous-titre">✦ théâtre / danse / numérique / série B ✦</div>
+    
+    <div class="menu">
+      <a href="#bio">★ le projet</a>
+      <a href="#ep1">◈ Episode 1</a>
+      <a href="#finance">◈ nous financer</a>
+      <a href="#gen">◈ Générateur d'épisodes</a>
+      <a href="#contact">◈ CONTACT</a>
+    </div>
+
+    <!-- ========== 1. BIO + CONCEPT ========== -->
+    <section id="bio">
+      <h2>⚧ Le projet ⚧</h2>
+      <div class="bio-groupe">
+        <p style="font-size:1.4rem; background:#340025; padding:1rem; border-left:20px solid #ff77aa;">
+        <span style="font-size:2.2rem;">“</span>Si nos corps sont mis en danger, nous les rendons dangereux.<span style="font-size:2.2rem;">”</span>
+        </p>
+        <p><strong>BODY HORROR SHOW</strong> — Le Body Horror Show est une série de formes scéniques courtes (20-40 min),
+indépendantes les unes des autres. Nous n'hésitons pas à convoquer la danse, le théâtre, la magie, la vidéo, les effets
+spéciaux, la marionnette...</p>
+
+        <p>La morale, la culpabilité et le juste/injuste destin sont des thèmes
+communs aux films d'horreur. Or ici, l'horreur ne s'incarne pas dans un monstre, un tueur ou une figure vengeresse, il se situe dans notre propre corps, là où l'on atteint la limite de l'humanité.</p>
+
+        <p>Notre équipe se retrouve aussi dans le fait de subir différentes formes d'oppressions (sexiste, raciste, transmisogyne). À différents niveaux et dans différents contextes, nous sommes objectifiées, fétichisées, et dépossédées de nos corps. Le Body Horror est notre revanche et les prémisses de notre vengeance.</p>
+        
+        <div class="membres">
+          <div class="carte">
+            <strong>MARIANA</strong> artiste franco-cubaine, metteuse en scène, technicienne, et fabriqueuse de masques et de créatures.
           </div>
-
-    <div id="video">
-        <iframe src="Untitled.mp4" type="video/mp4" height=540 width=960 frameborder="0" autoplay> </iframe>
-      </div>
-     
-  </head>
-  
-  <body>
-     <container>
-       <div>
-            <button class="generator" onclick= "maFonction()"> <strong> Cliquez pour génerer un scénario imaginaire</strong> </button>
-         </div>
-               <script> 
-                  function maFonction() { const tests = ["<p> <strong>Lieu</strong>: Un appartement </p> <p> <strong>Transformation</strong>: Abeilles </p> <p> <strong>Pitch</strong>: Au matin de leurs 17 ans, deux sœurs jumelles se transforment en abeilles. Or l'une se transforme en reine et l'autre en ouvrière.</p>", 
-                                                         "<p> <strong>Lieu</strong>: Un zoo abandonné </p> <p> <strong>Transformation</strong>: La peau transparente </p> <p> <strong>Pitch</strong>: En pleine session d'urbex un jeune homme retrouve un ami d'enfance perdu de vue depuis longtemps. Le premier fait des plans sur la comète rêvant de leur vie d'antant. Le deuxième peine à lui expliquer qu'il y a des bonnes et des mauvaises métamorphoses, or la sienne ne pourra jamais être acceptée par la société. </p>", 
-                                                         "<p> <strong>Lieu</strong>: Maternité </p> <p> <strong>Transformation</strong>: Seins serpents </p> <p> <strong>Pitch</strong>: Une femme vient d'accoucher. Elle ne parvient pas à allaiter car ses seins se transforment en serpent. Sa belle-mère vient lui rendre visite, et afin de pouvoir s'occuper de son fils la mère demande à sa belle-mère de lui couper les seins.</p>",
-                                                         "<p> <strong>Lieu</strong>: Un avion qui crash </p> <p> <strong>Transformation</strong>: Tardigrade (invulnérabilité) </p> <p> <strong>Pitch</strong>: La mère et la nourrice d'un enfant gravement malade ont trouvé un médicament qui lui permettra de survivre transformé en tardigrade. Elles en ont deux doses. L'avion crashe. Elles doivent choisir qui de la mère de sang ou de la mère de lait survivra en ingérant le médicament. </p>",
-                                                         "<p> <strong>Lieu</strong>: Une scène ouverte</p> <p> <strong>Transformation</strong>: Membres détachables </p> <p> <strong>Pitch</strong>: Une standuppeuse vous fera rire jusqu'à que des bras en tombent. Littéralement</p>",
-                                                         "<p> <strong>Lieu</strong>: Un resort hotel</p> <p> <strong>Transformation</strong>: Chauve souris </p> <p> <strong>Pitch</strong>: Pour respecter la vie privée de leurs clients un manager demande à une employée mi chauve souris de ne plus utiliser son écholocalisation. Doit-on se couper d'une part de soi pour un travail?  </p>" ] ; 
-                    const random = Math.floor(Math.random() * tests.length) ; document.getElementById("pitches").innerHTML = tests[random] }
-                </script>
- 
-     <div id = "pitches" class = "square">
-     </div>
-
-     
-</body>
-
-     
-     <footer>
-
-    <container>
-        <div id="contact">
-            <p> contactez nous via asere.acere@gmail.com</p>
+          <div class="carte">
+            <strong>JUSTINE</strong> artiste queer, performeuse et poètesse, adepte de bagarre et d'histoires d'adolescence.
+          </div>
+          <div class="carte">
+            <strong>VIO</strong> artiste queer, performeuse et créatrice costume, incarnation de figures fantastiques, sur scène ou sur écran.
+          </div>
         </div>
-</container>
-</footer>
+      </div>
+    </section>
+
+    <!-- ========== 2. ÉPISODE 1 - FOCUS ========== -->
+    <section id="ep1">
+      <h2 style="color:#ffb3ec;">🪲 ÉPISODE 1 : R/ AM I THE ASSHOLE... INSECT METAMORPHOSIS... 🪲</h2>
+      <div style="font-size:1.5rem; font-family:VT323;">35 min • danse, théâtre, V-Jing • forum Reddit</div>
+      <div class="teaser">
+        ▶ <a href="https://drive.google.com/file/d/14rTRT-c8vH23amP-LZ73NE-whb9lzeLu/view" target="_blank">TEASER — regarder ici (VHS encode)</a> 
+      </div>
+      <p><em>Seule dans sa chambre, OP (original poster), 24 F, cherche de l'aide
+sur un forum reddit: en effet, elle se transforme inéluctablement en
+insecte. Toutefois cela semble moins l'inquiéter que le date qu'elle a
+dans deux jours... Sa colocataire, 24 F, s'inquiète mais peine à
+trouver la bonne manière de l'aider.</em></p>
+      
+      <div class="photofake">
+        <div class="polaroid">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23221133' /%3E%3Ccircle cx='100' cy='70' r='40' fill='%23cc4499' /%3E%3Ctext x='20' y='130' fill='%23ffeef0' font-size='16' font-family='monospace'%3Ecarapace%3C/text%3E%3C/svg%3E"
+               alt="personnage sur ordi">
+          <span>💄 OP sur son ordi</span>
+        </div>
+        <div class="polaroid">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23221133' /%3E%3Cpath d='M50,70 L150,70' stroke='%23ffaaff' stroke-width='18' /%3E%3Ctext x='40' y='110' fill='%23ffeecc' font-size='16'%3Eongle en vrille%3C/text%3E%3C/svg%3E"
+               alt="femme qui crie">
+          <span>🩸 Cass pète un câble!</span>
+        </div>
+        <div class="polaroid">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140'%3E%3Crect width='200' height='140' fill='%23221133' /%3E%3Crect x='60' y='20' width='80' height='80' fill='%23aa44aa' /%3E%3Ctext x='20' y='130' fill='%23ffffff'%3Eécran cathodique%3C/text%3E%3C/svg%3E"
+               alt="Créature">
+          <span>📟 #fjsF$*5§dkq%::/X23</span>
+        </div>
+      </div>
+      <p style="margin-top:2rem; border-left:10px solid #ff44bb; padding-left:15px;"><strong>plateau idéal</strong> • 5x6m, pour fiche technique écrivez à asere.acere@gmail.com</p>
+    </section>
+
+    <!-- ========== 3. PLAN DE FINANCEMENT ========== -->
+    <section id="finance">
+      <h2>🩸 NOUS FINANÇONS NOTRE CHAIR FRAÎCHE 🩸</h2>
+      <p style="background:#320022; padding:0.5rem;">→ budget création par épisode (3 résidences + costumes/consos) ←</p>
+      
+      <div class="budget-table">
+        <div class="budget-row budget-header">
+          <span>POSTE</span> <span>JOURS</span> <span>BRUT/J</span> <span>TOTAL</span>
+        </div>
+        <div class="budget-row"><span>RÉSIDENCE 1 (rech.)</span> <span>4j</span> <span>140</span> <span>2310 TTC</span></div>
+        <div class="budget-row"><span>RÉSIDENCE 2 (jeu)</span> <span>5j</span> <span>140</span> <span>3570 TTC</span></div>
+        <div class="budget-row"><span>RÉSIDENCE 3 (créa.)</span> <span>6j</span> <span>140</span> <span>3570 TTC</span></div>
+        <div class="budget-row"><span>COSTUME (Pol Fasy)</span> <span>—</span> <span>forfait</span> <span>500</span></div>
+        <div class="budget-row"><span>CONSO (sang, latex…)</span> <span>—</span> <span>—</span> <span>500</span></div>
+        <div class="budget-row"><span>IMPRÉVUS</span> <span>—</span> <span>—</span> <span>200</span></div>
+      </div>
+      <div class="total-highlight">
+        TOTAL CRÉATION D'1 ÉPISODE ≈ 10 180 €
+      </div>
+    </section>
+
+    <!-- ========== 4. GÉNÉRATEUR DE SCÉNARIOS (TON CODE) ========== -->
+    <section id="gen">
+      <h2>🎲 GÉNÉRATEUR DE PITCHS • ÉPISODES FUTURS 🎲</h2>
+      <div class="generateur-block">
+        <div>
+          <button class="generator" onclick="maFonction()">
+            <strong>Cliquez pour générer un scénario imaginaire</strong>
+          </button>
+        </div>
+        
+        <div id="pitches" class="square">
+          <!-- Le pitch apparaîtra ici -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT / QR / CREDITS ========== -->
+    <footer id="contact">
+      <p style="font-size:1.6rem;">📧 asere.acere@gmail.com • ☎ 0479 15 24 17</p>
+      <p>📍 Bruxelles • @bodyhorrorshow (pas encore, presque)</p>
+      <p style="margin-top:2rem; border-top:2px solid cyan; padding-top:1rem;">
+        <span style="background:black; padding:0.6rem;">n'hésitez pas à nous contacter pour recevoir le DOSSIER COMPLET • BUDGET • FICHE TECHNIQUE</span><br>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function maFonction() {
+      const tests = [
+        "<p> <strong>Lieu</strong>: Un appartement </p> <p> <strong>Transformation</strong>: Abeilles </p> <p> <strong>Pitch</strong>: Au matin de leurs 17 ans, deux sœurs jumelles se transforment en abeilles. Or l'une se transforme en reine et l'autre en ouvrière.</p>",
+        "<p> <strong>Lieu</strong>: Un zoo abandonné </p> <p> <strong>Transformation</strong>: La peau transparente </p> <p> <strong>Pitch</strong>: En pleine session d'urbex un jeune homme retrouve un ami d'enfance perdu de vue depuis longtemps. Le premier fait des plans sur la comète rêvant de leur vie d'antan. Le deuxième peine à lui expliquer qu'il y a des bonnes et des mauvaises métamorphoses, or la sienne ne pourra jamais être acceptée par la société. </p>",
+        "<p> <strong>Lieu</strong>: Maternité </p> <p> <strong>Transformation</strong>: Seins serpents </p> <p> <strong>Pitch</strong>: Une femme vient d'accoucher. Elle ne parvient pas à allaiter car ses seins se transforment en serpent. Sa belle-mère vient lui rendre visite, et afin de pouvoir s'occuper de son fils la mère demande à sa belle-mère de lui couper les seins.</p>",
+        "<p> <strong>Lieu</strong>: Un avion qui crash </p> <p> <strong>Transformation</strong>: Tardigrade (invulnérabilité) </p> <p> <strong>Pitch</strong>: La mère et la nourrice d'un enfant gravement malade ont trouvé un médicament qui lui permettra de survivre transformé en tardigrade. Elles en ont deux doses. L'avion crashe. Elles doivent choisir qui de la mère de sang ou de la mère de lait survivra en ingérant le médicament. </p>",
+        "<p> <strong>Lieu</strong>: Une scène ouverte</p> <p> <strong>Transformation</strong>: Membres détachables </p> <p> <strong>Pitch</strong>: Une standuppeuse vous fera rire jusqu'à ce que les bras en tombent. Littéralement.</p>",
+        "<p> <strong>Lieu</strong>: Un resort hôtel</p> <p> <strong>Transformation</strong>: Chauve-souris </p> <p> <strong>Pitch</strong>: Pour respecter la vie privée de leurs clients, un manager demande à une employée mi-chauve-souris de ne plus utiliser son écholocalisation. Doit-on se couper d'une part de soi pour un travail ? </p>"
+      ];
+      const random = Math.floor(Math.random() * tests.length);
+      document.getElementById("pitches").innerHTML = tests[random];
+    }
+
+    // Pitch au chargement
+    window.onload = function() {
+      maFonction();
+    };
+  </script>
+</body>
+</html>
